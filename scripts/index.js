@@ -2,7 +2,7 @@ var start=0;
 var images=['1.jpg','2.jpg','3.png','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg'];
 var time=5000;
 
-
+//need to do it with setInterval
 
 function changeImg(){
     document.slide.src=images[start];
@@ -14,8 +14,10 @@ function changeImg(){
         start=0;
     }
 
-    setTimeout('changeImg()',time);
+//     setTimeout('changeImg()',time);
 }
+
+setInterval(changeImg ,time);
 
 window.onload=changeImg;
 
